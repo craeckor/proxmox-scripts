@@ -191,6 +191,7 @@ step_start "Node.js"
   ln -sf /usr/local/bin/node /usr/local/bin/nodejs
   rm "$_nodePackage" SHASUMS256.txt
   find /usr/local/include/node/openssl/archs -mindepth 1 -maxdepth 1 ! -name "$_opensslArch" -exec rm -rf {} \; >$__OUTPUT
+  npm install npm@9 -g
   step_end "Node.js ${CLR_CYB}$NODE_VERSION${CLR} ${CLR_GN}Installed"
 
 step_start "Yarn"
